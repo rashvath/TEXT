@@ -116,7 +116,7 @@ export default function TextForm(props) {
   <div className="btn-group" role="group" aria-label="Formatting">
     <button type="button" className="btn btn-success mx-1" style={{ width: '80px', height: '45px' }} onClick={FirstCapital}>Capitalize</button>
     <button type="button" className="btn btn-secondary mx-1" style={{ width: '80px', height: '45px' }} onClick={handleRemoveSpaces}>Spaces</button>
-    <button type="button" className="btn btn-primary mx-1" style={{ width: '80px', height: '45px' }} onClick={handleNumbersToWords}>Numbers to words</button>
+    <button type="button" className="btn btn-primary mx-1" style={{ width: '80px', height: '40px' }} onClick={handleNumbersToWords}>Numbers to words</button>
   </div>
 
   <div className="btn-group" role="group" aria-label="Actions">
