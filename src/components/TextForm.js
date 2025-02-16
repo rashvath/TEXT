@@ -108,15 +108,15 @@ export default function TextForm(props) {
         </div>
         <div className="d-flex flex-column gap-3">
   <div className="btn-group" role="group" aria-label="Text Operations">
-    <button type="button" className="btn btn-danger mx-1" style={{ width: '80px', height: '45px' }} onClick={handleUpClick}>Upper</button>
-    <button type="button" className="btn btn-warning mx-1" style={{ width: '80px', height: '45px' }} onClick={handleLoClick}>Lower</button>
-    <button type="button" className="btn btn-info mx-1" style={{ width: '80px', height: '45px' }} onClick={handleFindReplace}>Replace</button>
+    <button type="button" className="btn btn-danger mx-1" style={{ width: '80px', height: '30px' }} onClick={handleUpClick}>Upper</button>
+    <button type="button" className="btn btn-warning mx-1" style={{ width: '80px', height: '30px' }} onClick={handleLoClick}>Lower</button>
+    <button type="button" className="btn btn-info mx-1" style={{ width: '80px', height: '30x' }} onClick={handleFindReplace}>Replace</button>
   </div>
 
   <div className="btn-group" role="group" aria-label="Formatting">
-    <button type="button" className="btn btn-success mx-1" style={{ width: '80px', height: '45px' }} onClick={FirstCapital}>Capitalize</button>
-    <button type="button" className="btn btn-secondary mx-1" style={{ width: '80px', height: '45px' }} onClick={handleRemoveSpaces}>Spaces</button>
-    <button type="button" className="btn btn-primary mx-1" style={{ width: '80px', height: '40px' }} onClick={handleNumbersToWords}>Numbers</button>
+    <button type="button" className="btn btn-success mx-1" style={{ width: '80px', height: '30px' }} onClick={FirstCapital}>Capitalize</button>
+    <button type="button" className="btn btn-secondary mx-1" style={{ width: '80px', height: '30px' }} onClick={handleRemoveSpaces}>Spaces</button>
+    <button type="button" className="btn btn-primary mx-1" style={{ width: '80px', height: '30px' }} onClick={handleNumbersToWords}>Num to words</button>
   </div>
 
   <div className="btn-group" role="group" aria-label="Actions">
