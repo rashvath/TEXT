@@ -1,12 +1,12 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
         {/* Brand Name */}
-        <a className="navbar-brand" href="/">{props.title}</a>
+        <Link className="navbar-brand" to="#">{props.title}</Link>
 
         {/* Toggle Button for Mobile View */}
         <button 
@@ -23,16 +23,15 @@ export default function Navbar(props) {
 
         {/* Navbar Items and Dark Mode Toggle */}
         <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-          {/* Left Side - Home & About */}
           <ul className="navbar-nav my-auto">
             <li className="nav-item">
-              {/* <Link className="nav-link mx-2" to="/">Home</Link> */}
-              <a className="nav-link mx-2" href="/">Home</a>
+              <Link className="nav-link mx-2" to="/">Home</Link> 
+              {/* <a className="nav-link mx-2" href="#">Home</a> */}
 
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link className="nav-link mx-3" to="/about">{props.aboutText}</Link>
-            </li> */}
+            </li> 
           </ul>
 
           {/* Right Side - Dark Mode Toggle */}

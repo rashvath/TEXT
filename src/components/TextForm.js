@@ -108,20 +108,20 @@ export default function TextForm(props) {
         </div>
         <div className="d-flex flex-column gap-3">
   <div className="btn-group" role="group" aria-label="Text Operations">
-    <button type="button" className="btn btn-danger mx-1" style={{ width: '80px', height: '45px' }} onClick={handleUpClick}>Upper</button>
-    <button type="button" className="btn btn-warning mx-1" style={{ width: '80px', height: '45px' }} onClick={handleLoClick}>Lower</button>
-    <button type="button" className="btn btn-info mx-1" style={{ width: '80px', height: '45px' }} onClick={handleFindReplace}>Replace</button>
+    <button disabled={text.lenngth===0} type="button" className="btn btn-danger mx-1" style={{ width: '80px', height: '45px' }} onClick={handleUpClick}>Upper</button>
+    <button  disabled={text.lenngth===0} type="button" className="btn btn-warning mx-1" style={{ width: '80px', height: '45px' }} onClick={handleLoClick}>Lower</button>
+    <button  disabled={text.lenngth===0} type="button" className="btn btn-info mx-1" style={{ width: '80px', height: '45px' }} onClick={handleFindReplace}>Replace</button>
   </div>
 
   <div className="btn-group" role="group" aria-label="Formatting">
-    <button type="button" className="btn btn-success mx-1" style={{ width: '80px', height: '45px' }} onClick={FirstCapital}>Capitalize</button>
-    <button type="button" className="btn btn-secondary mx-1" style={{ width: '80px', height: '45px' }} onClick={handleRemoveSpaces}>Spaces</button>
-    <button type="button" className="btn btn-primary mx-1" style={{ width: '80px', height: '40px' }} onClick={handleNumbersToWords}>Num</button>
+    <button  disabled={text.lenngth===0} type="button" className="btn btn-success mx-1" style={{ width: '80px', height: '45px' }} onClick={FirstCapital}>Capitalize</button>
+    <button  disabled={text.lenngth===0} type="button" className="btn btn-secondary mx-1" style={{ width: '80px', height: '45px' }} onClick={handleRemoveSpaces}>Spaces</button>
+    <button  disabled={text.lenngth===0} type="button" className="btn btn-primary mx-1" style={{ width: '80px', height: '40px' }} onClick={handleNumbersToWords}>Num</button>
   </div>
 
   <div className="btn-group" role="group" aria-label="Actions">
-    <button type="button" className="btn btn-dark mx-1" style={{ width: '80px', height: '45px' }} onClick={handleCopyText}>Copy</button>
-    <button type="button" className="btn btn-danger mx-1" style={{ width: '80px', height: '45px' }} onClick={handleClear}>Clear</button>
+    <button  disabled={text.lenngth===0} type="button" className="btn btn-dark mx-1" style={{ width: '80px', height: '45px' }} onClick={handleCopyText}>Copy</button>
+    <button  disabled={text.lenngth===0} type="button" className="btn btn-danger mx-1" style={{ width: '80px', height: '45px' }} onClick={handleClear}>Clear</button>
   </div>
 </div>
 
@@ -129,10 +129,10 @@ export default function TextForm(props) {
     </div>
     <div className="container my-3" style={{color: props.mode === 'dark' ? 'white' : '#042743'} }>
         <h2>Your text summary</h2>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
-        <p>{0.008 * text.split(" ").length} Minutes read </p>
+        <p>{text.split(".").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+        <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes read </p>
         <h2>Preview</h2>
-        <p>{text.length>0?text:"Enter something in the textbox above to preview it here..."}</p>
+        <p>{text.length>0?text:"Nothing to preiview"}</p>
     </div>
     </>
   )
