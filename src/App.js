@@ -3,12 +3,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import About from './components/About'; // ✅ Import About Component
+import About from './components/About'; 
 import React from "react";
 import {
- BrowserRouter as Router,
- Routes,  // ✅ Use Routes instead of Switch
- Route
+  BrowserRouter as Router,
+  Routes,  
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -41,8 +41,9 @@ function App() {
       <Alert alert={alert} />
       <div className="container my-3">
         <Routes>
-          <Route exact path="/about" element={<About mode={mode} />} /> 
-          <Route exact path="/" element={ <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
+          <Route path="/about" element={<About mode={mode} />} /> 
+          <Route path="/TEXT" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
+          <Route path="/" element={ <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
         </Routes> 
       </div>
     </Router>
