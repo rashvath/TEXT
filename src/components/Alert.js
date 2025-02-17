@@ -1,39 +1,28 @@
 import React from "react";
 
-function Alert(props) {
+function Alert({ alert, setAlert }) {
+  // Function to capitalize the first letter
+  const capitalize = (word) => word ? word.charAt(0).toUpperCase() + word.slice(1) : "";
+
   return (
-    props.alert && (
-      <div
-        style={{
-          position: "fixed", // Fixed position ensures it stays in place on the screen
-          top: "10px", // Adjusts the vertical position
-          left: "50%",
-          transform: "translateX(-50%)", // Centers the alert horizontally
-          zIndex: 9999,
-          width: "auto",
-          height: "50px", // Keeps the container height fixed
-          display: "flex", // Flexbox for alignment
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    alert && (
+      <div style={{ height: "50px" }}>
         <div
-          className={`alert alert-${props.alert.type.toLowerCase()} alert-dismissible fade show`}
+          className={`alert alert-${alert.type.toLowerCase()} alert-dismissible fade show`}
           role="alert"
           style={{
-            backgroundColor: "#caf0f7",
-            color: "#198754",
-            border: "1px solid #a3cfbb",
-            width: "100%", // Makes the alert container take up the full width
-            textAlign: "center",
+            backgroundColor: "#caf0f7", // Custom background color
+            color: "#198754", // Custom text color
+            border: "1px solid #a3cfbb", // Custom border color
           }}
         >
-          <strong>{props.alert.type.charAt(0).toUpperCase() + props.alert.type.slice(1)}</strong>: {props.alert.message}
+          <strong>{capitalize(alert.type)}</strong>: {alert.message}
           <button
             type="button"
             className="btn-close"
             data-bs-dismiss="alert"
             aria-label="Close"
+            onClick={() => setAlert(null)} // Manually dismissing the alert
           ></button>
         </div>
       </div>

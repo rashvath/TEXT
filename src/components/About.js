@@ -1,4 +1,4 @@
-//import React, { useState } from 'react';
+import React from 'react';
 
 export default function About(props) {
  //   const [MyStyle, setStyle] = useState({
@@ -7,7 +7,7 @@ export default function About(props) {
  //   });    
     let MyStyle={
       color: props.mode=== 'dark'?'white':'#042743',
-      backgroundColor:props.mode=== 'dark'?'#042743':'white',
+      backgroundColor:props.mode=== 'dark'?'#042743':'white', 
     }
     return (
         <div className='container' style={MyStyle}>
